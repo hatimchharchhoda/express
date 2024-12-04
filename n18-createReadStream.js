@@ -1,9 +1,10 @@
 const {createReadStream} = require('fs')
 
-const stream = createReadStream('./content/bigfile.txt',{
+const stream = createReadStream('./content/bigtext.txt',{
    highWaterMark: 9000,
-   //encoding: 'utf8',
+   encoding: 'utf8',
 })
+
 // by reading file using this we find that we are reading data in chunks instead of full   instance
 // default 64kb
 // last buffer - remainder
